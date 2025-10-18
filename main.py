@@ -106,6 +106,8 @@ for epoch in range(epochs):
 
         print(f"Epoch {epoch+1}/{epochs}, Loss: {loss:.4f}")
 
+np.save('loss_history.npy', np.array(loss_history))
+
 # Evaluate the model on test data
 def predict(X):
     _,_,_, h2 = forward_pass(X)
@@ -116,6 +118,12 @@ y_true = np.argmax(y_test, axis=1)
 test_accuracy = accuracy(y_true, y_pred)
 
 print("Test Accuracy:", test_accuracy)
+
+#plotting the loss curve
+import matplotlib.pyplot as plt
+loss_history = np.load('loss_history.npy')
+plt.plot(loss_history)
+plt.show()
 
 
 
