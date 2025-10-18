@@ -44,7 +44,7 @@ the loss and accuracy came out to be:
 | Metric        | Result      |
 | ------------- | ----------- |
 | Training Loss | ~0.2909 |
-| Test Accuracy | **0.9239%**  |
+| Test Accuracy | **92.39%**  |
 
 ---
 
