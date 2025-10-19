@@ -13,6 +13,13 @@ This project implements:
 - **Softmax** activation for the output layer
 - **Mini-batch gradient descent** for optimization
 - **Cross-entropy loss** function for training
+- **Multiple optimizers:**
+    - SGD
+    - Momentum
+    - NAG (Nesterov Accelerated Gradient)
+    - Adagrad
+    - RMSProp
+    - Adam
 - **Accuracy evaluation** on test data
 
 ---
@@ -32,32 +39,40 @@ NN_from_scratch/
 │
 ├── main.py          # Main training and evaluation script
 ├── utils.py         # Utility functions (ReLU, Softmax, loss, accuracy)
+├── optimizer.py     # Implementation of various optimizers
+├── data/            # Folder containing MNIST dataset (mnist.npz)
 ├── README.md        # Project documentation (you’re reading this)
-└── requirements.txt # Dependencies (optional)
+├── requirements.txt # Dependencies (NumPy, scikit-learn, matplotlib)
+└── loss_histories.npy # Saved loss curves for all optimizers
 ```
 ---
 ## 📊 Results
-- After training for 10 epochs (with hidden_size=128 and learning_rate=0.01),
-the loss and accuracy came out to be:
+- Trained the network with 6 different optimizers.
+- Each optimizer has its own training loss curve.
 
 ![alt text](image/image.png)
 ---
 ![alt text](image/plot.png)
 ---
 
-| Metric        | Result      |
-| ------------- | ----------- |
-| Training Loss | ~0.1197 |
-| Test Accuracy | **92.41%**  |
+| Optimizer | Test Accuracy |
+| --------- | ------------- |
+| SGD       | 90.39%        |
+| Momentum  | 96.51%        |
+| NAG       | 96.69%        |
+| Adagrad   | 96.84%        |
+| RMSProp   | 97.53%        |
+| Adam      | 97.23%        |
 
 ---
 
 ## 📘 Key Learnings
 
 - Understanding how forward and backward propagation work mathematically
-- Implementing gradient descent manually
+- Implementing gradient descent and advanced optimizers manually
 - Working with one-hot encoding for categorical targets
 - Handling matrix operations efficiently in NumPy
 - Building an end-to-end training loop from scratch
+- Comparing optimizer performance on MNIST dataset
 
 **⭐ If you found this helpful, give the repo a star on GitHub!**
