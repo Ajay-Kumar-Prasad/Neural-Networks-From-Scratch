@@ -10,7 +10,10 @@ def relu_derivative(z):
 
 def softmax(z):
     #softmax activation function
-    return np.exp(z)/np.sum(np.exp(z),axis=1, keepdims=True)
+    z = z - np.max(z, axis=1, keepdims=True)  # shift to avoid overflow
+    exp_z = np.exp(z)
+    return exp_z / np.sum(exp_z, axis=1, keepdims=True)
+
 
 def compute_loss(y_true, y_pred):
     #cross-entropy loss
