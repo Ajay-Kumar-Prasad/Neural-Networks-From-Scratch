@@ -60,7 +60,7 @@ NN_from_scratch/
 | SGD       | 90.39%        |
 | Momentum  | 96.51%        |
 | NAG       | 96.69%        |
-| Adagrad   | 96.84%        |
+| Adagrad   | 95.84%        |
 | RMSProp   | 97.53%        |
 | Adam      | 97.23%        |
 
