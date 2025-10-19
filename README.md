@@ -37,9 +37,9 @@ NN_from_scratch/
 ```
 ---
 ## 📊 Results
-After training for 10 epochs (with hidden_size=128 and learning_rate=0.01),
+- After training for 10 epochs (with hidden_size=128 and learning_rate=0.01),
 the loss and accuracy came out to be:
----
+
 ![alt text](image/image.png)
 ---
 ![alt text](image/plot.png)
